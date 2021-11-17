@@ -1,10 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Are+You+Serious&display=swap');
+body{
+    cursor: none;
+    padding: 200px;
+    background-color:darkslateblue
+}
+
+.pointer {
+    position: absolute;
+    height: 480px; top:100px;
+    width: 480px; left:50%;
+    pointer-events: none;
+  }
+
+  .pointer img {
+    width: 140px;
+  }
 
 .title{
     font-family: 'Are You Serious', cursive;
     background-color: magenta;
     font-size: 100px;
     margin: -200px 100px -100px 0px;
+    transition: 0.5s;
+}
+
+.title:hover{
+    color: pink;
 }
 
 .content{
@@ -27,9 +48,25 @@ h1{
     width: 200px;
 }
 
-/* .parent{
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-} */
+
+/* responsive part */
+@media screen and (max-width: 992px) {
+    body {
+      background-color:gold;
+      padding: 10px;
+    }
+    .title{
+        background-color: blue;
+        font-size: 50px;
+    }
+    .content{
+        background-color:tomato;
+        font-size: 500px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+body {
+    background-color:sienna;
+}
+}
